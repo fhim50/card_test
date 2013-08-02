@@ -37,11 +37,14 @@ def winner(lc,pc):
 def is_last_card(h):
     return not len(h) 
 
-# def highest_rand(c):
-#     ranks = {}
-#     ranks = [rank(i) for i in c]
-#     highest = max(ranks)
-#     return list
+def highest_rank(c):
+    dic = dict()
+    for item in c:
+        dic[item] = rank(item)
+    h = max(dic.values())
+    for key,value in dic.iteritems():
+        if h == value:
+            return key
 
 
 def play(hand,leading_card=None):
